@@ -1,0 +1,311 @@
+html,
+body,
+div,
+span,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+a,
+address,
+em,
+img,
+ins,
+strong,
+b,
+u,
+i,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+main,
+td,
+article,
+aside,
+figure,
+figcaption,
+footer,
+header,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video,
+iframe {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+
+body {
+    font-family: "Montserrat", sans-serif;
+    color: #333;
+    line-height: 1;
+}
+
+ol,
+ul {
+    list-style: none;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+    width: 100%;
+}
+
+html {
+    font-size: 62.5%;
+    box-sizing: border-box;
+}
+
+.container {
+    width: 100%;
+    max-width: 1700px;
+    margin: 0 auto;
+}
+
+header {
+    width: 100dvw;
+    height: auto;
+    padding: 2rem 0;
+}
+
+.tituloPrincipal {
+    font-size: clamp(27px, 2.5vw, 36px);
+    font-weight: 700;
+    color: #fff;
+    margin-left: 10.6%;
+}
+
+.bg-green-color {
+    background-color: #04a090;
+}
+
+.hero {
+    width: 100%;
+    height: 30dvh;
+    position: relative;
+}
+
+.containerImgHero {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: 10;
+}
+
+.containerImgHero img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.tituloDoHero {
+    position: absolute;
+    z-index: 12;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: .5rem;
+    bottom: 24px;
+    left: 24px;
+}
+
+.tituloDoHero>span {
+    font-size: clamp(15px, 1.5vw, 16px);
+    color: #fff;
+    font-weight: 300;
+}
+
+.h2Dohero {
+    color: #fff;
+    font-weight: 700;
+    font-size: clamp(27px, 2.5vw, 38px);
+}
+
+.h3Dohero {
+    color: #fff;
+    font-size: clamp(15px, 1.2vw, 16px);
+    font-weight: 300;
+}
+
+.h3Dohero span {
+    font-weight: 500;
+}
+
+.overlay {
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    position: absolute;
+    z-index: 11;
+    background-color: rgba(0, 0, 0, .3);
+}
+
+/* começando a parte de posts populares */
+.postsPop {
+    width: 100%;
+    height: auto;
+    max-width: 360px;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.postsPop>h4 {
+    max-width: 100%;
+    height: auto;
+    font-size: clamp(20px, 1.8vw, 24px);
+    color: #fff;
+    text-transform: capitalize;
+    border: none;
+    border-radius: 10px;
+    padding: 1rem 0 1rem 2rem;
+    font-weight: 700;
+    box-shadow: 1px 10px 18px -1px rgba(0, 0, 0, 0.28);
+}
+
+.cardPop {
+    max-width: 100%;
+    height: auto;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    justify-items: start;
+    align-items: start;
+    box-shadow: 1px 10px 18px -1px rgba(0, 0, 0, 0.28);
+    border-radius: 10px;
+    padding: 1rem;
+}
+
+.containerCards {
+    max-width: 100%;
+    height: auto;
+    /* padding: .5rem; */
+    display: flex;
+    flex-direction: column;
+    gap: 2rem
+}
+
+.postsPop .containerCards>a {
+    display: block;
+    width: 100%;
+    height: auto;
+    text-decoration: none;
+    color: black;
+}
+
+.postsPop .containerCards>a:hover {
+    animation: cardAnimation 3s ease-in-out infinite;
+}
+
+.containerImgPop {
+    width: 110px;
+    height: 60px;
+    border: none;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.containerImgPop img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.tituloPop {
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+}
+
+.tituloPop>h5 {
+    font-size: clamp(14px, 1vw, 15px);
+    font-weight: 700;
+    margin-top: .8rem;
+}
+
+.tituloPop>p {
+    font-size: clamp(10px, .9vw, 12px);
+}
+
+.tituloPop>h5,
+.tituloPop>p {
+    padding-left: .7rem;
+}
+
+@keyframes cardAnimation {
+    0% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-8px);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
+
+/* iniciando a seção categorias */
+.categorias {
+    width: 100%;
+    height: auto;
+    max-width: 360px;
+}
+
+.categorias>h4 {
+    max-width: 100%;
+    height: auto;
+    font-size: clamp(20px, 1.8vw, 24px);
+    color: #fff;
+    text-transform: capitalize;
+    border: none;
+    border-radius: 10px;
+    padding: 1rem 0 1rem 2rem;
+    font-weight: 700;
+}
+.containerCat {
+    width: 100%;
+    height: auto;
+    max-width: 100%;
+}
+.containerCat > a {
+    display: flex;
+    width: 100%;
+    height: auto;
+    padding: 1rem 0;
+    justify-content: space-between;
+    text-decoration: none;
+}
+.containerCat > a span {
+    font-size: clamp(15px, 1.2vw, 16px);
+    color: #303030;
+    font-weight: 600;
+}
+.containerCat > a:hover {
+    background-color: #b6b0b09d;
+}
