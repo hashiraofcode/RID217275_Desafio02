@@ -67,6 +67,7 @@ body {
     font-family: "Montserrat", sans-serif;
     color: #333;
     line-height: 1;
+    background-color: #bdbdbd;
 }
 
 ol,
@@ -90,6 +91,7 @@ html {
     max-width: 1700px;
     margin: 0 auto;
     overflow: hidden;
+    background-color: #ffffff;
 }
 
 header {
@@ -110,9 +112,11 @@ header {
 }
 
 .hero {
-    width: 100%;
-    height: 30dvh;
+    width: 80%;
+    height: 100%;
     position: relative;
+    border-radius: 20px;
+    overflow: hidden;
 }
 
 .containerImgHero {
@@ -179,6 +183,7 @@ header {
     display: flex;
     flex-direction: column;
     gap: 2rem;
+    justify-self: start;
 }
 
 .postsPop>h4 {
@@ -281,6 +286,10 @@ header {
     width: 100%;
     height: auto;
     max-width: 360px;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    justify-self: start;
 }
 
 .categorias>h4 {
@@ -323,27 +332,28 @@ header {
 /* iniciando a seção de posts */
 /* 1 fazendo cards */
 .posts {
-    width: 100%;
-    max-width: 744px;
+    width: 80%;
     height: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 2.5rem;
 }
 
 .containerPosts {
     width: 100%;
     height: auto;
     display: flex;
-    justify-content: center;
+    justify-content: space-evenly;
     align-items: center;
-    gap: 2rem;
     flex-wrap: wrap;
+    gap: 1rem;
 }
 
-.containerPosts>a {
+.containerPosts > a {
     text-decoration: none;
     width: 100%;
-    max-width: 290px;
-    height: 360px;
-
+    max-width: 350px;
+    height: 393px;
     display: block;
 }
 
@@ -437,13 +447,13 @@ p.manchete {
 }
 
 .verMais>h5 {
-    font-size: clamp(20px, 1.8vw, 24px);
+    font-size: clamp(15px, 1.8vw, 24px);
     color: #fff;
     text-transform: capitalize;
     font-weight: 700;
 }
 .verMais > a {
-    font-size: clamp(14px, 1.2vw, 15px);
+    font-size: clamp(10px, 1.2vw, 15px);
     color: #ffffff;
     text-transform: capitalize;
 }
@@ -451,3 +461,72 @@ p.manchete {
     color: #616161;
 }
 /* estruturando o layout da página */
+main {
+    padding: 3rem;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-template-rows: auto auto;
+    row-gap: 3rem;
+    justify-items: center;
+}
+.categorias {
+    grid-column: 2/3;
+}
+.posts {
+    grid-row: 2/3;
+}
+footer {
+    width: 100%;
+    height: 10dvh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+footer p {
+    color: #ffffff;
+    font-size: clamp(14px,1.2vw,15px);
+    height: auto;
+    display: flex;
+    align-items: start;
+}
+footer p span {
+    display: inline-block;
+    width: auto;
+    height: auto;
+    font-size: 10px;
+    margin-right: 5px;
+}
+
+@media  (max-width:425px) {
+main {
+    padding: 1rem 1rem;
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: repeat(4, auto);
+    justify-items: center;
+}
+.hero {
+    width: 100%;
+    height: 396px;
+    grid-row: 1/2;
+}
+ .categorias {
+    grid-row: 4/5;
+    grid-column: 1/2;
+    justify-self: center;
+}
+.postsPop {
+    grid-row: 3/4;
+    justify-self: center;
+    grid-column: 1/2;
+}
+.postsPop .containerCards>a:hover {
+    animation: none;
+}
+.containerCat>a:hover {
+    background-color: #ffffff;
+}
+.posts {
+    width: 100%;
+}
+}
