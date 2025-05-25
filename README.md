@@ -1,4 +1,4 @@
-# Projeto Desafio_02RID
+#  🚀 Projeto: Blog News – Desafio DNC
 ## 📚 Desenvolva um Blog responsivo
 ## 🎯 Objetivo
 > O objetivo do desafio é desenvolver um blog responsivo que se adapte a qualquer dispositivo garantindo uma boa experiência do usuário a partir de um design funcional.
@@ -7,8 +7,8 @@
 Para resolver este desafio eu analisei a interface proposta no prototipo do figma e observei qual seria a melhor forma de organizar o layout da página para que assim o código ficasse ainda adaptavel entre os aparelhos sem a necessidade de fazer muitas modificações através do media queries. Cheguei a conclusão de que a melhor maneira seria organizando a página com grid layout e as interfaces menos complexas seria mais viável com flex box. E para garantir que a interface ficasse responsiva com menos código utilizei medidas relativas (rem,%,vw,vh,dvw,dvh) e clamp. E vale ressaltar que a construção do blog foi feita com a semântica correta fazendo uso das tags html (header,main,section...) e com as melhores práticas para acessibilidade.
 ---
 ## Tecnologias utilizadas 🔨
-- html
-- css
+- HTML5
+- CSS3 (com Grid, Flexbox e Media Queries)
  ---
 ## 📃 Critérios de Avaliação:
 - Semântica
