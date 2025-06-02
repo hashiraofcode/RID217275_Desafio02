@@ -496,7 +496,11 @@ footer p span {
     font-size: 10px;
     margin-right: 5px;
 }
-
+@media (max-width: 768px) {
+    .postsPop .containerCards>a:hover {
+    animation: none;
+}
+}
 @media  (max-width:425px) {
 main {
     padding: 1rem 1rem;
