@@ -85,14 +85,13 @@ html {
     font-size: 62.5%;
     box-sizing: border-box;
 }
-
+/* Erro ocorrido o site estava com a altura do container limitada a 100dvh e com overflow hidden o que limitou a exibição do blog, prejudicando a experiência do usuário*/
 .container {
     width: 100%;
     max-width: 1700px;
     margin: 0 auto;
     overflow: hidden;
     background-color: #ffffff;
-    height: 100dvh;
 }
 
 header {
